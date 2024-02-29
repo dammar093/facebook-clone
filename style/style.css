@@ -1,0 +1,585 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+html,body{
+    background-color: #ece8e8ba;
+}
+/* header section start */
+header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 40px;
+    cursor: pointer;
+}
+.searchBar{
+    background-color: #ECF3FF;
+    padding: 10px 12px;
+    border-radius: 100px;
+}
+.searchBar input{
+   outline: none;
+   border: none;
+   background-color:#ECF3FF;
+   width: 200px;
+
+}
+.center ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    list-style: none;
+    margin: 0 30px;
+
+}
+.center ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:8px 25px;
+    width: 100px;
+    border-radius:20px;
+    
+
+}
+.center ul li:hover{
+    background-color:#ECF3FF ;
+}
+.center ul li i{
+    font-size: 30px;
+}
+.icon{
+    color: blue;
+}
+.right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.right i{
+    cursor: pointer;
+}
+
+.profile img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.right i{
+    font-size: 30px;
+}
+.notify,.message{
+    padding-bottom: 10px;
+}
+.notify i,.message i{
+   position: absolute;
+   padding-bottom: 10px;
+   font-size: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.notify span,.message span{
+  background-color: red;
+  padding: 2px 4px;
+  font-size: 12px;
+  color: white;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  right: -19px;  
+
+}
+@media (max-width:600px){
+    .searchBar{
+        display: none;
+    }
+}
+.main{
+    display: flex;
+    justify-content:space-between;
+}
+.sideBar{
+    overflow-y: scroll;
+    padding: 0 20px;
+    width: 30%;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    height:calc(100vh - 60px)
+    
+}
+
+.sideProfile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 12px;
+    gap: 10px;
+    cursor: pointer;
+}
+.sideProfile img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+.sideProfile h3{
+    font-size: 16px;
+    font-weight: 300px;
+    color: rgb(69, 68, 68);
+
+}
+.sideLinks ul{
+    margin:20px 12px;
+    list-style: none;
+}
+.sideLinks ul li{
+    margin-top: 12px;
+    padding:6px 12px;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.sideLinks ul li:hover{
+    background-color: rgb(125, 122, 122);
+}
+.sideLinks ul li i{
+    font-size: 24px !important;
+}
+.sideLinks ul li span{
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(69, 68, 68);
+}
+.shorcut{
+    padding: 10px 20px;
+}
+.shorcut h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(69, 68, 68);
+
+}
+.group{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.group img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.group span{
+    font-size: 18px;
+    font-weight: 530;
+    
+}
+.post{
+    width: 45%;
+}
+.story{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 330px;
+    border-radius: 10px;
+}
+.story-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.storyIcon{
+    display: flex;
+    align-items: center;
+}
+.storyIcon i{
+    font-size: 24px;
+}
+.story-content{
+    position: relative;
+    padding: 20px;
+    
+}
+.bire{
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   border-radius: 10px;
+   height: 220px;
+   width: 130px;
+}
+.bire img{
+   height: 180px;
+   width: 130px;
+   object-fit: cover;
+   border-radius: 10px 10px 0 0;
+}
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
+    bottom:20px;
+    left:50px ;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.add i{
+    font-size:50px;
+    color: blue;
+}
+.add span{
+    font-size: 14px;
+    display: flex;
+   
+}
+
+
+
+.story-content{
+
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+.story-content::-webkit-scrollbar{
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+.storyImage{
+    position: relative;
+    
+}
+.storyProfile img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid blue;
+}
+.storyImage span{
+    position: absolute;
+    bottom: 12px;
+    left: 25px;
+    color:white;
+    font-weight: 600;
+    font-size: 12px;
+    -webkit-text-stroke:0.3px black;
+}
+.storyView img{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 220px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.mind{
+    height: 140px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    border-radius: 10px;
+}
+.topPost{
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+.postInput{
+    width: 80%;
+    /* border: 1px solid black; */
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #ECF3FF;
+}
+.postInput input{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    background-color: #ECF3FF;
+}
+.postProfile img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.postIcon{
+    margin-top: 5px;
+}
+.postIcon ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.postIcon ul li{
+    padding:4px 12px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.postIcon ul li i{
+    font-size: 30px;
+    border-radius: 6px;
+}
+.postIcon ul li:hover{
+    background-color: #cecaca;
+    border-radius: 10px;
+}
+.postIcon ul li span{
+    font-weight: 700;
+    color: rgb(69, 68, 68);
+}
+
+.live{
+    color: red;
+}
+.photo{
+    color:lightgreen;
+}
+.feeling{
+    color: orange;
+}
+.newsFeed{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    border-radius: 10px;
+}
+.caption{
+    padding-left: 10px;
+    font-size: 14px;
+    color:black;
+    font-weight: 400;
+}
+.postProfile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.postPerson{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.with{
+    color: rgb(125, 122, 122);
+}
+.postIcon i{
+    font-size: 30px;
+    cursor: pointer;
+}
+.postImage img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.like{
+    padding:0 10px;
+    cursor: pointer;
+     
+}
+.likeIcon{
+    display: flex;
+    justify-content: space-between;
+}
+.likeIconLeft{
+    display: flex;
+}
+.likeIcon span{
+    font-size: 14px;
+    color: rgb(125, 122, 122);
+    cursor: pointer;
+}
+.react{
+    color: blue;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+.love{
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+.likeComment{
+    padding: 10px;
+}
+.likeComment ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.likeComment ul li{
+    font-size: 18px;
+    color: rgb(125, 122, 122);
+    cursor: pointer;
+}
+.commentInput{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.writeComment{
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    width: 80%;
+    padding: 8px 12px;
+    background-color: #ECF3FF;
+    border-radius: 15px;
+}
+.writeComment i{
+    color: rgb(125, 122, 122);
+    cursor: pointer;
+}
+.writeComment input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #ECF3FF;
+}
+.inputProfile{
+    padding: 10px;
+   
+}
+.inputProfile img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.commentPost{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding:10px 6px;
+    background-color: #cbc1c184;
+    width: 80%;
+    margin: 10px 30px;
+    border-radius: 10px;
+}
+.commentPostProfile{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+.commentPostProfile img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.postedComment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.extra{
+    display: flex;
+    gap: 10px;
+    margin-left: 40px;
+}
+.extra span{
+    cursor: pointer;
+}
+.sponser{
+    width: 25%;
+    height: calc(100vh - 60px);
+    padding:30px;
+    overflow-y: scroll;
+    position: sticky;
+    top: 60px;
+    z-index: 1000;
+}
+.pageProfile h2{
+    font-size: 16px;
+    color: rgb(125, 122, 122);
+}
+.promotion{
+    padding: 10px 15px;
+    color: rgb(125, 122, 122);
+    font-size: 14px;
+}
+.birthday{
+    padding: 10px 0;
+}
+.birthday h3{
+    font-size: 16px;
+  color: rgb(125, 122, 122);
+}
+.gift{
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.gift i{
+    font-size: 30px;
+    color: blue;
+}
+.gift span{
+    color: rgb(125, 122, 122);
+
+}
+.topContact{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(125, 122, 122);
+}
+.topContact h3{
+    font-size: 16px;
+}
